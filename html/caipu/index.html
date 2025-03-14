@@ -1,0 +1,2009 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>北京师范大学亚太实验学校</title>
+  <link rel="stylesheet" href="/r/cms/www/default/css/bootstrap.min.css">
+  <script src="/r/cms/www/default/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+  <link href="/r/cms/www/default/css/select2.min.css" rel="stylesheet" />
+</head>
+<style>
+  .big-img {
+    height: auto;
+    /* margin-top: 2.722rem; */
+  }
+
+  .big-img img {
+    width: 100%;
+  }
+
+  .part-left {
+    width: 280px;
+    box-shadow: rgb(255 255 255 / 0%) 0px 0px 1px;
+    transition: unset;
+    z-index: 0;
+    background: #ededed;
+    margin-right: 44px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .sidebar-alone {
+    transform: translate(0px, 0px) rotate(0deg);
+    width: 280px;
+    text-align: center;
+    height: 127px;
+    line-height: 127px;
+    box-shadow: rgb(255 255 255 / 0%) 0px 0px 1px;
+    transition: unset;
+    z-index: 0;
+    width: 280px;
+    height: 127px;
+    border-radius: 15.5px;
+    opacity: 1;
+    transition: unset;
+    background-image: url('/r/cms/www/default/images/alone/alone_parent_bg.png');
+    color: #fff;
+    font-size: 28px;
+    font-family: SourceHanSerifSC-Bold;
+    font-weight: 700;
+  }
+
+  .details-guide {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+  }
+
+  .container .lunbo-part {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+    min-height: 1272px;
+    margin-top: 60px;
+  }
+
+  .container .lunbo-part .part-right {
+    width: 850px;
+    position: relative;
+  }
+
+  .menubox {
+    background-color: #ededed;
+    /* margin-top: 40px; */
+  }
+
+  /*折叠菜单  菜单中一级菜单的样式*/
+  .panneltitle {
+    border-bottom: solid 1px #c3c3c3;
+    width: 280px;
+    height: 50px;
+    box-shadow: rgb(255 255 255 / 0%) 0px 0px 1px;
+    transition: unset;
+    z-index: 0;
+    line-height: 50px;
+    padding: 0 30px;
+  }
+
+  .panneltitle:hover {
+    background-color: #317400;
+  }
+
+  .panneltitle:hover .color-white {
+    color: #fff;
+  }
+
+  .menuname {
+    display: inline-block;
+    width: 85%;
+    font-size: 18px;
+    font-family: SourceHanSerifSC-Bold;
+  }
+
+  /*折叠菜单  （二级）菜单中二级菜单的样式*/
+  .pannelbox {
+    display: none;
+    text-align: center;
+    line-height: 25px;
+    background-color: #ededed;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+
+  /*折叠菜单  （多级）菜单中二级菜单的样式*/
+  .pannelbox .panneltitle {
+    text-align: left;
+    padding-left: 46px;
+  }
+
+  /*折叠菜单  （多级）菜单中三级菜单的样式*/
+  .pannelbox .pannelbox .panneltitle {
+    background-color: #c5c1f9;
+    width: 81%;
+  }
+
+  .pannelbox-third {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: solid 1px #c3c3c3;
+    height: 50px;
+    box-shadow: rgb(255 255 255 / 0%) 0px 0px 1px;
+    transition: unset;
+    z-index: 0;
+    line-height: 50px;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .details-guide {
+    font-size: 12px;
+    margin-top: 26px;
+    color: #999;
+    margin-left: -5px;
+    margin-bottom: 40px;
+  }
+
+  .details-guide .black {
+    color: #666;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .details-guide .gray {
+    color: #999;
+    margin-left: 5px;
+  }
+
+  .alone_content_bg {
+    position: absolute;
+    bottom: -10px;
+    right: 10rem;
+    width: 20rem;
+    z-index: 1;
+  }
+
+  .big-title {
+    display: block;
+    margin-top: 25px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 29px;
+    text-align: center;
+  }
+
+  .context {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 40px 0;
+  }
+
+  .semilight-ul li {
+    text-decoration: none;
+    color: #323232;
+    font-size: 14px;
+    float: left;
+    color: #999;
+    font-size: 14px;
+    width: 33%;
+    text-align: center;
+  }
+
+  .page-link {
+    margin-bottom: 90px;
+    height: 24px;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  .Semilight {
+    font-weight: 400 !important;
+  }
+
+  .fl {
+    float: left;
+  }
+
+  .page-link i {
+    margin-right: 10px;
+    display: block;
+    font-size: 20px;
+    color: #E30B20;
+    margin-left: 1px;
+  }
+
+  .page-link .next {
+    height: 24px;
+    line-height: 24px;
+    max-width: 50%;
+  }
+
+  .page-link .next i {
+    display: inline-block;
+    font-size: 22px;
+    color: #E30B20;
+    margin-left: 12px;
+  }
+
+  .page-link .prev a {
+    color: #333;
+    display: block;
+    font-size: 14px;
+  }
+
+  .overfow-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .page-link .next span {
+    color: #666666;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .page-link .next a {
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .list-wrapper li {
+    display: flex;
+    padding: 15px 15px 15px 0px;
+    border-bottom: 1px dashed #777;
+    align-items: center;
+    height: 100px;
+  }
+
+  .content-item-left {
+    width: 10%;
+    text-align: right;
+    border-right: 1px solid #999;
+    padding-right: 20px;
+  }
+
+  .content-item-left .date {
+    font-size: 20px;
+    color: #317400;
+  }
+
+  .content-item-left .year {
+    font-size: 14px;
+    color: #cecece;
+  }
+
+  .content-item-center {
+    width: 70%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .content-item-center .tips-name {
+    font-size: 12px;
+    border: 1px solid #268dff;
+    padding: 2px;
+    border-radius: 3px;
+    color: #268dff;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .content-item-right {
+    width: 20%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .content-item-right img {
+    width: 90px;
+  }
+
+  .weekly-diet {
+    padding: 20px;
+  }
+
+  .weekly-diet .abs-p {
+    position: absolute;
+  }
+
+  .weekly-diet .abs-p.week-txt {
+    left: 100px;
+  }
+
+  .weekly-diet .abs-p.week-select {
+    left: 130px;
+  }
+
+  .weekly-diet-head {
+    position: relative;
+    line-height: 25px;
+  }
+
+  .weekly-diet-head .select-wrap {
+    position: absolute;
+    left: 100px;
+    top: 0;
+  }
+
+  .weekly-diet-head h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .week-time {
+    position: absolute;
+    left: 590px;
+    top: 0;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .weekly-diet table {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+  }
+
+  .weekly-diet table th {
+    height: 45px;
+    border-left: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    background: #317400;
+    color: #fff;
+  }
+
+  .weekly-diet .six table td {
+    width: calc(16.666%);
+  }
+
+  .weekly-diet table td {
+    word-break: break-all;
+    word-wrap: break-word;
+    height: 350px;
+    /* flex: 1; */
+    width: calc(25%);
+    line-height: 20px;
+    border-left: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .weekly-diet-body {
+    padding-top: 40px;
+  }
+
+  .weekly-diet-item:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .weekly-diet-body .weekly-diet-title {
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #464351;
+    font-weight: 600;
+  }
+
+  .weekly-diet-body .week-title {
+    font-size: 0;
+    height: 45px;
+    width: 100%;
+    background: #317400;
+    line-height: 45px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    display: flex;
+    color: #fff;
+  }
+
+  .weekly-diet-body .week-title span {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    flex: 1;
+  }
+
+  .weekly-diet .diet-day-item>td:first-child {
+    color: #464351;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: #F5F7FA !important;
+  }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    color: #606266 !important;
+  }
+
+  .icon-arrow-no {
+    width: 14px;
+  }
+
+  .icon-arrow-right-hover {
+    transform: rotate(-90deg);
+  }
+
+  .panneltitle:hover .icon-arrow-right {
+    display: none;
+  }
+
+  .panneltitle:hover .icon-arrow-right-hover {
+    display: inline-block;
+  }
+
+  .icon-arrow {
+    width: 14px;
+  }
+
+  .panneltitle:hover .icon-arrow-green-down {
+    display: none;
+  }
+
+  .panneltitle:hover .icon-arrow-green-down-hover {
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+
+  .panneltitle.show .icon-arrow-green-down {
+    transform: rotate(90deg);
+  }
+
+  .panneltitle.show:hover .icon-arrow-green-down-hover {
+    transform: rotate(0deg);
+  }
+
+  .pannelActive {
+    background: #317400;
+    color: #fff;
+  }
+
+  .pannelActive a {
+    color: #fff;
+  }
+
+  .pannelActive .icon-arrow-right {
+    display: none;
+  }
+
+  .pannelActive .icon-arrow-right-hover {
+    display: inline-block;
+  }
+
+  .pannelActive .icon-arrow-green-down {
+    display: none;
+  }
+
+  .pannelActive .icon-arrow-green-down-hover {
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+
+  .pannelActive.show .icon-arrow-green-down-hover {
+    display: inline-block;
+    transform: rotate(0deg);
+  }
+
+  .panneltitle.pannelActive:hover .icon-arrow-green-down-hover {
+    display: inline-block;
+  }
+
+  .remark {
+    padding: 20px;
+    white-space: pre-line;
+  }
+
+  .di-reset {
+    align-content: unset;
+    vertical-align: unset;
+  }
+
+  .di-primary {
+    /* border-top: 1px solid #333;
+    border-bottom: 1px solid #333; */
+    align-content: center;
+    height: 100%;
+    text-align: left;
+    white-space: pre-line;
+    padding-left: 4px;
+    padding-right: 2px;
+    vertical-align: middle;
+  }
+
+  .di-secondary {
+    align-content: center;
+    height: 100%;
+    text-align: left;
+    white-space: pre-line;
+    padding-left: 4px;
+    padding-right: 2px;
+    vertical-align: middle;
+
+  }
+
+  .diet-xq {
+    align-content: center !important;
+    height: 100%;
+    text-align: left !important;
+    white-space: pre-line;
+    padding-left: 4px;
+    padding-right: 2px;
+    vertical-align: center !important;
+  }
+
+  .di-qingzhen {
+    font-weight:800;
+    color:#078c51;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+</style>
+
+
+<body>
+  <div class="header-children">
+<link rel="stylesheet" href="/r/cms/www/default/css/reset.css" />
+<link rel="stylesheet" href="/r/cms/www/default/css/header.css?time=" + new Date().getTime() />
+<link rel="stylesheet" href="/r/cms/www/default/icon/iconfont.css" />
+<link rel="stylesheet" href="/r/cms/www/default/fonts/iconfont.css">
+
+<link rel="stylesheet" href="/r/cms/www/default/css/password.css" />
+<link rel="stylesheet" href="/r/cms/www/default/css/jquery.my-message.1.1.css"/>
+
+<script>
+	localStorage.setItem('base', '');
+</script>
+
+<!-- IE兼容ES6基本语法 -->
+<!-- <script src="js/browser.min.js"></script> -->
+<!-- 转换 Iterator、Generator、Set、Maps、Proxy、Reflect、
+Symbol、Promise等语法 -->
+<!-- <script src="js/browser-polyfill.min.js"></script> -->
+<!-- ======== -->
+<!-- <script src="/r/cms/www/default/js/flexible.js"></script> -->
+<script src="/r/cms/www/default/js/jquery-1.12.4.js"></script>
+<script src="/r/cms/www/default/js/sm.js"></script>
+<script src="/r/cms/www/default/js/crypto-js.js"></script>
+<script src="/r/cms/www/default/js/jquery.my-message.1.1.js"></script>
+<script src="/r/cms/www/default/js/jquery.validate.js"></script>
+<script src="/r/cms/www/default/js/jquery.page.js"></script>
+<script src="/r/cms/www/default/js/chinese.js"></script>
+<script src="/r/cms/www/default/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/r/cms/www/default/js/app.js"></script>
+<script src="/r/cms/www/default/js/permCheck.js" type="text/javascript" charset="utf-8"></script>
+<script src="/r/cms/www/default/js/siteSurver.js"></script>
+<script>
+	setTimeout(function() {
+					siteInitTime(getUrlArg('errorLink'));
+			}, 500);
+	$.extend($.validator.messages, {
+    required: "必选字段",
+    remote: "请修正该字段",
+    email: "请输入正确格式的电子邮件",
+    url: "请输入合法的网址",
+    date: "请输入合法的日期",
+    dateISO: "请输入合法的日期 (ISO).",
+    number: "请输入合法的数字",
+    digits: "只能输入整数",
+    creditcard: "请输入合法的信用卡号",
+    equalTo: "请再次输入相同的值",
+    accept: "请输入拥有合法后缀名的字符串",
+    maxlength: $.validator.format("请输入一个长度最多是 {0} 的字符串"),
+    minlength: $.validator.format("请输入一个长度最少是 {0} 的字符串"),
+    rangelength: $.validator.format("请输入一个长度介于 {0} 和 {1} 之间的字符串"),
+    range: $.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
+    max: $.validator.format("请输入一个最大为 {0} 的值"),
+    min: $.validator.format("请输入一个最小为 {0} 的值")
+});
+</script>
+
+<!-- 顶1部 -->
+
+<script type="text/javascript">
+
+	$(function() {
+		// GOV.yuyinInit("","true");
+		// register-sso
+		function isSsoLogin (){
+			var openSso = 'false';
+			if(openSso == 'true'){
+				$('.register-sso').css('display','inline-block');
+				$('.header .typeArea .navbar ul li').css('margin-left','50px');
+			} else {
+				$('.register-sso').css('display','none');
+				$('.header .typeArea .navbar ul li').css('margin-left','40px');
+			}
+
+		}
+		// isSsoLogin();
+	})
+</script>
+
+<div class="header">
+	<div class="header_nav_box">
+		<div class="barrierBed none"></div>
+		<div class="header_nav">
+			<!-- 搜索隐藏模块展开 -->
+			<div class="search-show none">
+				<div class="search-top">
+					<div class="box">
+						<div class="title">
+							<input type="text" maxlength="150" id="headerKeyword" placeholder="请输入你要查找的内容"/>
+							<i onclick="upSearch()"  class="iconfont iconsousuo1 searchcss2"></i>
+						</div>
+						
+						<i class="iconfont iconguanbi"></i>
+						<!-- <div class="hotBot">
+							<div class="text">词</div>
+							<ul>
+								<li><a rel="noopener noreferrer" onclick="upSearch('预约访校')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">预约访校</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('预约访校7')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">预约访校7</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('一周食谱')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">一周食谱</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('图片集')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">图片集</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('serpdummycrawl1')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">serpdummycrawl1</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('参观校园')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">参观校园</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('阮圣轶')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">阮圣轶</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('张清源')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">张清源</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('2022年中考成绩')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">2022年中考成绩</a></li>
+								<li><a rel="noopener noreferrer" onclick="upSearch('绘本')" rel="noopener noreferrer" target='_blank' rel="noopener noreferrer">绘本</a></li>
+								<div class="clearfix"></div>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="typeArea">
+				<div class="logo logo-children-new">
+					<a rel="noopener noreferrer" href="/"><img src="/r/cms/www/default/images/index/logo-black.png" alt=""/></a>
+				</div>
+				<div class="navbar navbar-children" id="navbarList">
+					<!--给0初始值是为了方便首页其他页面非栏目内容页面不报错-->
+					<!--这一段是为了获取当前内容栏目所在的顶层栏目所在顶层栏目的序号位置-->
+					<!--如果当前栏目位置原本是在第二行，则少取一个，将当前访问栏目放最后-->
+					<ul style="position: relative;">
+						<!--如果当前栏目位置原本是在第二行，则少取一个，取第一行-->
+							<li  >
+							<a rel="noopener noreferrer" href="/gywm.jhtml" id="276" class="text-color">学校概况</a>
+							</li>
+							<li  >
+							<a rel="noopener noreferrer" href="/mddj1.jhtml" id="245" class="text-color">党建工作</a>
+							</li>
+							<li  >
+							<a rel="noopener noreferrer" href="/jxky.jhtml" id="206" class="text-color">教育科研</a>
+							</li>
+							<li  >
+							<a rel="noopener noreferrer" href="/jsfz.jhtml" id="246" class="text-color">教师发展</a>
+							</li>
+							<li  >
+							<a rel="noopener noreferrer" href="/xsfc.jhtml" id="247" class="text-color">学生风采</a>
+							</li>
+							<li  >
+							<a rel="noopener noreferrer" href="/xyfw.jhtml" id="249" class="text-color">校园服务</a>
+							</li>
+							<li  >
+							<a rel="noopener noreferrer" href="/xyh1.jhtml" id="345" class="text-color">校友会</a>
+							</li>
+						
+						<!-- <li class="moreBox" style="display: block;">
+							<div>
+								<span class="pointer moreH">更多</span>
+								<i class="iconfont  iconfanhui-copy-copy-copy-copy icoH"></i>
+								<i class="iconfont  iconfanhui-copy-copy-copy-copy1 none icoH"></i>
+							</div>
+						</li> -->
+						<li style="margin-right: 0px;margin-left: 35px;">
+							<i class="search iconfont iconsousuo1 pointer text-color"></i>
+						</li>
+						<li>
+							<a href="/admin/" target="_blank" rel="noopener noreferrer"><span class="text-color">登录</span></a>
+						</li>
+					</ul>
+					<div style="position: absolute;top: 100px;" id="navContent">
+						<div style="position: relative;">
+							<div  class="text-wrapper_25_nav flex-col" id="childNavList"></div>
+							<div style="position: absolute;right: 200px;top: 0px;">
+								<div class="group_15_nav flex-col">
+									<span class="text_99_nav" id="navName">关于我们</span>
+									<!-- <div class="block_15_nav flex-col"></div> -->
+									<span class="paragraph_12_nav" id="txtMap"></span>
+									<div class="text-wrapper_26_nav flex-col" >
+										<a rel="noopener noreferrer" class="text_105_nav" id="checkDetail">查看更多</a>
+									</div>
+								</div>
+							</div>
+							<div  style="position: absolute;left: 315px;top: 0px;">
+								<div class="group_16_nav flex-col">
+									<div id="navImage" style="position: relative;padding-top: 50%;"></div>
+									<span class="paragraph_13_nav" id="txtMap2"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 右边 -->
+				<div class="function">
+					<!-- <div class="conceal" style="right: 115px;">
+	
+						<div class="typeface">
+							<div class="lineH"></div>
+							<span>简体</span>
+							<i class="iconfont iconfanhui-copy-copy-copy-copy"></i>
+							<i class="iconfont iconfanhui-copy-copy-copy-copy1 none"  ></i>
+							<div class="font-show none">
+								<div class="background pointer">
+									<a rel="noopener noreferrer">简体</a>
+								</div>
+								<div class="background1 pointer">
+									<a rel="noopener noreferrer">繁体</a>
+								</div>
+							</div>
+						</div>
+						<div class="lineH"></div>
+					</div> -->
+					<!-- <i class="search iconfont iconsousuo1 pointer"></i> -->
+					<!-- <a class="register-sso" title="注册" href="/register.htm"><i class=" iconfont iconicon_line_edit-1_24" ></i></a> -->
+					<!-- <span class="stateUser"></span> -->
+					<!-- <a rel="noopener noreferrer" href="/rss" rel="noopener noreferrer"><i class="network iconfont iconrss-line pointer"></i></a> -->
+				</div>
+			</div>
+		</div>
+		<div class="headerLine"></div>
+		<div class="moreBox1" style="height: 293px;">
+			<!-- <div class="block_14_nav flex-row">
+				<div class="group_15_nav flex-col">
+					<span class="text_99_nav" id="navName">关于我们</span>
+					<div class="block_15_nav flex-col"></div>
+					<span class="paragraph_12_nav" id="txtMap"></span>
+				</div>
+				<div class="text-wrapper_25_nav flex-col" id="childNavList">
+					
+				</div>
+				<div class="group_16_nav flex-col" id="navImage"></div>
+			</div>
+			<div class="block_16_nav flex-row">
+				<div class="text-wrapper_26_nav flex-col" >
+					<a rel="noopener noreferrer" class="text_105_nav" id="checkDetail">查看更多</a>
+				</div>
+				<div class="text-wrapper_27_nav flex-col justify-between">
+					<span class="text_106_nav"></span>
+					<span class="text_107_nav"></span>
+				</div>
+				<span class="paragraph_13_nav" id="txtMap2"></span>
+			</div> -->
+			
+			<!-- <div class="font-show2">
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/zszp.jhtml" target="_blank" >招生招聘</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/yxz.jhtml" target="_blank" >影像志</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/xlview.jhtml" target="_blank" >校历</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/sybanner.jhtml" target="_blank" >首页banner</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/zxly.jhtml" target="_blank" >在线留言</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/kyxm.jhtml" target="_blank" >科研项目</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/syzjh.jhtml" target="_blank" >首页组件化</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/xsyg.jhtml" target="_blank" >校史沿革</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/qrtx.jhtml" target="_blank" >高一新生完成清单</a>
+				</div>
+				<div class=" pointer">
+					<a rel="noopener noreferrer" href="/sytztc.jhtml" target="_blank" >首页通知弹窗</a>
+				</div>
+			</div> -->
+			<!--第二行展示的后面的栏目 排除第一行展示的栏目且不是当前栏目-->
+		</div>
+	</div>
+
+	<div id="goTop" class="pointer">
+		<span>返回<br />顶部</span>
+		<i class="iconfont iconjiantousvg"></i>
+	</div>
+	<div class="mian-all">
+		<div class="all-dig"></div>
+		<div class="all-showHide">
+			<p>修改密码</p>
+			<div class="showHide-input">
+				<div >
+					<label>
+						<span>*</span>
+						旧密码：
+						<input id="oldPass" maxlength="50" type="password" placeholder="请输入旧密码">
+					</label>
+				</div>
+				<div>
+					<label>
+						<span>*</span>
+						新密码：
+						<input id="newPass" maxlength="50" type="password" placeholder="请输入新密码">
+					</label>
+				</div>
+				<div>
+					<label>
+						<span>*</span> 确认新密码：
+						<input id="PlqStr" maxlength="50" type="password" placeholder="请再次输入新密码">
+					</label>
+				</div>
+			</div>
+			<div class="all-add">
+				<button id="addPassWord">完成</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	
+	// 设置cookie
+	function setTCookie(c_name, value, expiredays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (expiredays*24*60*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = c_name + "=" + value + "; " + expires+"; path=/";//path=/是根路径
+	}
+	//获取cookie
+	function getTCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1);
+			if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+		}
+		return "";
+	}
+	// 清除cookie
+	function clearTCookie(name) {
+		setTCookie(name, "", -1);
+	}
+
+	// 加载地址图标
+	var linkTag = $('<link rel="icon" type="image/x-icon" href="https://yatai-oss.yataischool.net/cms/u/cms/www/202303/141559428p8f.ico"/>');
+	$($('head')[0]).append(linkTag);
+
+	function getAuthToken() {
+        let cookies = document.cookie.split(";");
+        var str = "";
+        for(let i = 1;i<cookies.length;i++){
+					let cookie = cookies[i]
+            if (cookie.trim().startsWith("AUTHTOKEN")) {
+                console.log(cookie)
+                str = cookie.trim().replace("AUTHTOKEN=", "")
+                break
+            }
+        }
+        return str;
+    }
+
+	function quitLogin() {
+		var authToken = getAuthToken()
+		
+		console.log(document.cookie)
+		api.POST('/logout', {authToken:authToken}, function (result) {
+			if (result.code === 200) {
+				myMessage.add(result.message, 'success');
+				localStorage.setItem('JEECMS-Auth-Token', '');
+				window.localStorage.setItem('paidUser',false)
+				clearTCookie('rememberMe');
+				console.log(getTCookie('rememberMe'))
+				userLoad()
+				if(window.location.href.indexOf("member-vipcenter") != -1 ){
+					document.getElementById('loginUrl').click();
+				}
+			} else {
+				myMessage.add(result.message, 'error');
+			}
+		})
+	}
+
+	function userLoad() {
+		$(".stateUser").load("/csi-loginStatus.htm")
+	}
+	userLoad()
+
+	$('.stateUser').on('mouseenter', function () {
+		$('.stateUser ul').stop().slideDown(500);
+	});
+	if($('.font-show2 div').length===0){
+		$('.moreBox').addClass('none')
+		$('.icoH').addClass('none')
+		$('.lineH').eq(0).addClass('none')
+	}
+	$('.stateUser').on('mouseleave', function () {
+		$('.stateUser ul').stop().slideUp(500);
+	});
+	$('.moreBox').on("mouseover",function(){$('.moreBox1').stop().slideDown(500);$('.icoH').eq(0).addClass('none');$('.icoH').eq(1).removeClass('none')})
+	$('.moreBox').on("mouseout",function(){$('.moreBox1').stop().slideUp(500);$('.icoH').eq(1).addClass('none');$('.icoH').eq(0).removeClass('none')})
+	// $('.moreBox1').on("mouseover",function(){$('.moreBox1').stop().slideDown(500);$('.icoH').eq(0).addClass('none');$('.icoH').eq(1).removeClass('none')})
+	// $('.moreBox1').on("mouseout",function(){$('.moreBox1').stop().slideUp(500);$('.icoH').eq(1).addClass('none');$('.icoH').eq(0).removeClass('none')})
+	$('.header').on('mouseleave', '', function() {//绑定鼠标划出事件
+		$('.moreBox1').stop().slideUp(500);$("#navContent").stop().slideUp(500);
+	});
+	// 菜单
+	$("#navbarList ul li a").on("mouseover",function(){
+		let parentId = $(this).context.id
+		if (!parentId) {
+			return
+		}
+		let _that =  $(this)
+		$('.moreBox1').stop().slideDown(500);
+		api.GET('/channel/list', {
+					parentId: parentId
+				}, function(res) {
+					let str = ''
+					if (res.code == 200) {
+						let list = res.data
+						console.log(list)
+						res.data.map((item,index) => {
+							if(index==0 && parentId != 250){
+								_that.attr('href',item.url)
+								$("#checkDetail").attr("href", item.url)
+							}
+							if(index==0 && parentId == 250){
+								item.url = '/zszc1.jhtml?id=305'
+							}
+							str = str + '<span class="text_100_nav"><a href='+item.url+'>'+item.name+'</a></span>'
+						})
+						$("#childNavList").html(str)
+					}
+				})
+				api.GET('/channel/get', {
+					id: parentId
+				}, function(res) {
+					if (res.code == 200) {
+						console.log(res.data)
+						$("#navName").html(res.data.name)
+						if(parentId == 250){
+							// $("#checkDetail").attr("href", res.data.url)
+							_that.attr('href','/zszc1.jhtml?id=305')
+							$("#checkDetail").attr("href", '/zszc1.jhtml?id=305')
+						}
+						let leftTxt = res.data.txtMap.txt
+						if (leftTxt != undefined && leftTxt != null) {
+							let tmp = leftTxt.replace(/<[^<>]+>/g, '')
+							if (tmp.length > 100) {
+								tmp = tmp.substring(0, 100)
+								tmp += '...'
+							}
+							$("#txtMap").html(tmp)
+						} else {
+							$("#txtMap").html("")
+						}
+						let rightTxt = res.data.txtMap.txt2
+						if (rightTxt != undefined && rightTxt != null) {
+							$("#txtMap2").html(rightTxt.replace(/<[^<>]+>/g, ''))
+						} else {
+							$("#txtMap2").html("")
+						}
+						$("#navImage").html('<img src='+res.data.attr.titleImg.resUrl+'?x-oss-process=image/resize,w_600/quality,q_90 />')
+					}
+				})
+				$("#navContent").stop().slideDown(500)
+	})
+	// var isTypeface = true
+	//更换简体繁体
+	// $('.typeface .background a').on('click',function(){
+	// 	if(isTypeface){
+	// 		$('.typeface>span').text('简体');
+	// 		$(this).css('color','#E30B20');
+	// 		$('.typeface .background1 a').css('color','#333');
+	// 		zh_tran('s')
+	// 		isTypeface = false
+	// 	}
+	// 	else{
+	// 		// $('.typeface>span').text('简体');
+	// 		// $(this).text('繁体');
+	// 		zh_tran('s')
+	// 		isTypeface = true
+	// 	}
+
+	// });
+	// $('.typeface .background1 a').on('click',function(){
+	// 	if(isTypeface){
+	// 		$('.typeface>span').text('繁体');
+	// 		$(this).css('color','#E30B20');
+	// 		$('.typeface .background a').css('color','#333');
+	// 		zh_tran('t')
+	// 		isTypeface = false
+	// 	}
+	// 	else{
+	// 		// $('.typeface>span').text('简体');
+	// 		// $(this).text('繁体');
+	// 		zh_tran('s')
+	// 		isTypeface = true
+	// 	}
+	// });
+
+	/**
+	 * 分级保护-修改密码start
+	 */
+	$('#addPassWord').click(function () {
+		var oldPStr = desEncrypt($('#oldPass').val());
+		var newPStr
+		var againPStr
+		if ($('#oldPass').val() == '') {
+			myMessage.add('旧密码不能为空', 'error');
+			return
+		}
+		if ($('#newPass').val() == '') {
+			myMessage.add('新密码不能为空', 'error');
+			return
+		}
+		if ($('#PlqStr').val() == '') {
+			myMessage.add('确认密码不能为空', 'error');
+			return
+		}
+		if ($('#PlqStr').val() === $('#newPass').val()) {
+			newPStr = desEncrypt($('#newPass').val());
+			againPStr = newPStr
+		} else {
+			myMessage.add('两次输入密码不一致!', 'error');
+			return
+		}
+
+		api.POST('/member/memberinfo/pstr', {
+			oldPStr: oldPStr,
+			newPStr: newPStr,
+			againPStr: againPStr
+		}, function (result) {
+			if (result.code === 200) {
+				$('.mian-all').css('display',"none")
+				myMessage.add(result.message, 'success');
+			} else {
+				myMessage.add(result.message, 'error');
+			}
+		})
+	})
+	// function getHeaders(){
+	//   var req = new XMLHttpRequest();
+	//   req.open('GET', document.location.href, false);
+	//   req.send(null);
+	//   var headerArr = req.getAllResponseHeaders().split('\n');
+	// 	var headers = {};
+	// 	for(var i = 0;i<headerArr.length;i++){
+	// 		if(headerArr[i]){
+	// 			var index = headerArr[i].indexOf(':');
+	// 			var key = headerArr[i].slice(0,index);
+	// 			var value = headerArr[i].slice(index+1).trim();
+	// 			headers[key] = value
+	// 		}
+	// 	}
+	// 	return headers
+	// }
+	// var headers = getHeaders()
+	/**
+	 * 分级保护-修改密码end
+	 */
+	$(function(){
+		if(localStorage.getItem('typeface') && localStorage.getItem('typeface')=='简体'){
+			$('.typeface>span').text('简体');
+			zh_tran('s')
+		}else if(localStorage.getItem('typeface') && localStorage.getItem('typeface')=='繁体'){
+			$('.typeface>span').text('繁体');
+			zh_tran('t')
+		}else{
+			$('.typeface>span').text('简体');
+			zh_tran('s')
+		}
+		/**
+		 * 分级保护之修改密码 判断开始是否第一次进入  是弹出修改密码弹窗 start
+		 */
+		var passType = window.localStorage.getItem('passType')
+		var token = localStorage.getItem('JEECMS-Auth-Token');
+		if (token)  {
+			if (passType === 'true') {
+				$('.mian-all').css('display',"block")
+			}
+		}
+		/**
+		 * 分级保护之修改密码 判断开始是否第一次进入  是弹出修改密码弹窗 end
+		 */
+	})
+	$('.typeface .background a').on('click', function () {
+		$('.typeface>span').text('简体');
+		$(this).css('color', '#E30B20');
+		$('.typeface .background1 a').css('color', '#333');
+		localStorage.setItem('typeface','简体');
+		zh_tran('s')
+	});
+	$('.typeface .background1 a').on('click', function () {
+		$('.typeface>span').text('繁体');
+		$(this).css('color', '#E30B20');
+		$('.typeface .background a').css('color', '#333');
+		localStorage.setItem('typeface','繁体');
+		zh_tran('t')
+	});
+
+
+	function upSearch(q) {
+		var keyWords = q?encodeURI(q):''
+		var inpVal = encodeURI($('#headerKeyword').val())
+		var headerKeyword = keyWords||inpVal
+		window.open('/search.htm?q=' + headerKeyword);
+	}
+
+	$("#headerKeyword").keypress(function (e) {
+		if (e.which == 13) {
+			var headerKeyword = encodeURI($('#headerKeyword').val())
+			window.open('/search.htm?q=' + headerKeyword);
+		}
+	});
+
+
+	//简体繁体切换
+	$('.typeface').on('mouseenter', function () {
+		$('.typeface .iconfanhui-copy-copy-copy-copy').addClass('none');
+		$('.typeface .iconfanhui-copy-copy-copy-copy1').removeClass('none');
+	});
+	$('.typeface').on('mouseleave', function () {
+		$('.typeface .iconfanhui-copy-copy-copy-copy1').addClass('none');
+		$('.typeface .iconfanhui-copy-copy-copy-copy').removeClass('none');
+	});
+	$(function () {
+		/*固定*/
+		var sTop = 0;
+		$(window).scroll(function () {
+			sTop = $(this).scrollTop();
+			if (sTop > 600) {
+				$('#goTop').show()
+			} else {
+				$('#goTop').hide()
+
+			}
+		});
+
+		$('#goTop').click(function () {
+			$body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $(
+					'html,body');
+			$body.animate({
+				scrollTop: 0
+			}, 1000);
+		});
+
+	})
+
+</script>
+<a id="loginUrl" href="/login" style="display: none" target="_self"></a>
+
+  </div>
+
+  <div class="big-img">
+    <img src="/r/cms/www/default/images/alone/alone_head_cover.png" alt="">
+  </div>
+
+  <div class="container">
+    <div class="lunbo-part overflow">
+      <div class="part-left fl">
+        <div class="sidebar-alone">每周菜单</div>
+        <div class="menubox">
+          <!-- 进入页面判断当前栏位的顶级父栏目 获取id后拿到所有二级栏目 -->
+          <div class="panneltitle pannelActive show">
+            <a class="menuname color-white" rel="noopener noreferrer" href="/mzsp1.jhtml">每周菜单</a>
+            <!-- <i class="iconfont  iconfanhui-copy-copy-copy-copy icoH"></i>
+            <i class="iconfont  iconfanhui-copy-copy-copy-copy1 icoH none"></i> -->
+            <!-- <img src="/r/cms/www/default/images/alone/alone_menubox_arrow_green.png" alt="" class="icon-arrow-no icon-arrow-right">
+            <img src="/r/cms/www/default/images/alone/alone_menubox_arrow_white.png" alt="" class="icon-arrow-no icon-arrow-right-hover none"> -->
+          </div>
+        </div>
+      </div>
+      <div class="part-right fl">
+        <div class="details-guide">
+          <a rel="noopener noreferrer" href="/" class="black Semilight">首页</a> >
+          <a rel="noopener noreferrer" href="/mzsp1.jhtml" class="black Semilight">每周菜单</a>        </div>
+
+        <div class="weekly-diet">
+          <div class="weekly-diet-head">
+            <span class="abs-p" style="color:#464351;font-size:20px;font-weight: 600;margin-right: 20px;">每周菜单</span>
+            <span class="abs-p week-txt">周次</span>
+            <div class="select-wrap">
+              <select class="period-select"></select>
+              <select class="term-select"></select>
+              <select class="week-select"></select>
+            </div>
+            <span class="week-time"></span>
+          </div>
+          <div class="weekly-diet-body">
+            <div class="weekly-diet-item">
+              <h3 class="weekly-diet-title"></h3>
+              <div class="week-title">
+                <span>星期</span>
+                <span>早餐</span>
+                <span class="xq_show">加餐</span>
+                <span>午餐</span>
+                <span class="xq_show">午点</span>
+                <span>晚餐</span>
+              </div>
+              <table>
+                <tr class="diet-day-item">
+                  <td>星期一</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+                <tr class="diet-day-item">
+                  <td>星期二</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+                <tr class="diet-day-item">
+                  <td>星期三</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+                <tr class="diet-day-item">
+                  <td>星期四</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+                <tr class="diet-day-item">
+                  <td>星期五</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+                <tr class="diet-day-item">
+                  <td>星期六</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+                <tr class="diet-day-item">
+                  <td>星期日</td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                  <td class="diet-item xq_show diet-xq"><div class="di-primary"></div></td>
+                  <td class="diet-item di-reset">
+                    <!-- <div>主菜</div> -->
+                    <div class="di-primary"></div>
+                    <!-- <div class="di-qingzhen">清真</div>
+                    <div class="di-secondary"></div> -->
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="remark"></div>
+      </div>
+    </div>
+  </div>
+
+<link rel="stylesheet" type="text/css" href="/r/cms/www/default/css/footer.css?time=" + new Date().getTime()/>
+<div class="footer">
+	<div class="footer_container">
+		<div class="box_9 flex-col">
+			<div class="group_17 flex-row">
+					<div class="section_15 flex-col">
+						<div class="image-text_21">
+								<img class="image_8" referrerpolicy="no-referrer" src="/r/cms/www/default/images/index/logo-ft.png">
+						</div>
+						<div class="text_52" style="margin-top: 15px;">
+							<span class="text_88">网址：</span>
+							<span class="text_89">www.yataischool.net</span>
+						</div>
+						<div class="text_52">地址：北京市昌平区北七家镇曹碾村西北</div>
+						<div class="text_52">媒体业务联络：微信号tyxdtt</div>
+						<div class="text_52">
+							<span class="text_90">招生电话：</span>
+							<span class="text_91">
+								中学&nbsp;010-69759602/69759603/69759867/69759868
+							</span>
+						</div>
+						<div class="text_52">
+							<span class="text_90"></span>
+							<span class="text_93">
+								幼小&nbsp;010-81939901/69758871/69758872/69758873
+							</span>
+						</div>
+						<div class="text_52">
+							<span class="text_94">意见与监督电话：</span>
+							<span class="text_95">010-69755002</span>
+							<span class="text_96">（工作日</span>
+							<span class="text_97">9:00</span>
+							<span class="text_98">-</span>
+							<span class="text_99">17:00</span>
+							<span class="text_100">）</span>
+						</div>
+						<div class="text_52">
+							<span class="text_101">邮箱：</span>
+							<span class="text_102">yataixuexiao@bnuaps.net</span>
+						</div>
+						<div class="block_12 flex-col"></div>
+						<div class="group_19 flex-row">
+							<div class="text-group_33 flex-col justify-between">
+								<span class="text_52">
+									Copyright&nbsp;©&nbsp;2023&nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;&nbsp;
+								</span>
+								<div class="text_52">
+									<span class="text_103">
+										北京师范大学亚太实验学校&nbsp;版权所有&nbsp;
+									</span>
+									<a class="text_104" style="color: #fff;" href="https://beian.miit.gov.cn/">京 ICP备05038853</a>
+								</div>
+							</div>
+							<img class="label_6" referrerpolicy="no-referrer" src="/r/cms/www/default/images/index/label-6.png">
+						</div>
+					</div>
+					<div style="height: 100%;">
+						<div class="text-group_34">
+							<div class="text_58">快速链接</div>
+							<div class="flex-col">
+								<span class="text_59">教师</span>
+								<a target="_blank" rel="noopener noreferrer" href="https://www.ttcdw.cn/h/spec/xcsjyxt/" class="text_60">北京市西城区教育党校</a>
+								<a target="_blank" rel="noopener noreferrer" href="https://www.xcjyyxw.cn/" class="text_60">西城研修网</a>
+								<a target="_blank" rel="noopener noreferrer" href="http://jw.beijing.gov.cn/" class="text_60">北京市西城区教育委员会</a>
+								<a target="_blank" rel="noopener noreferrer" href="https://cmis.bjedu.cn/#/login" class="text_60">北京市中小学学籍管理平台</a>
+							</div>
+							<div class="flex-col">
+								<span class="text_59">学生</span>
+								<a target="_blank" rel="noopener noreferrer" href="https://reading.smartedu.cn/" class="text_60">国家智慧教育读书平台</a>
+								<a target="_blank" rel="noopener noreferrer" href="https://zhsz.bjedu.cn/web/login/index" class="text_60">学生综合素质评价平台</a>
+								<a target="_blank" rel="noopener noreferrer" href="https://gzzp.bjedu.cn:9003/#/Login" class="text_60">北京市普通高中学生综合素质评价平台</a>
+							</div>
+						</div>
+					</div>
+				<!-- <div class="text-wrapper_21 flex-col">
+					<span class="text_59">学校</span>
+					<a rel="noopener noreferrer" href="/xxgk2.jhtml" class="text_60">学校概况</a>
+					<a rel="noopener noreferrer" href="/xsyg.jhtml" class="text_60">校史沿革</a>
+					<a rel="noopener noreferrer" href="/xywh.jhtml" class="text_60">校园文化</a>
+					<a rel="noopener noreferrer" href="/ryzs.jhtml" class="text_60">荣誉展示</a>
+					<a rel="noopener noreferrer" href="/zzjg.jhtml" class="text_60">组织结构</a>
+					<a rel="noopener noreferrer" href="/xydl1.jhtml" class="text_60">校园导览</a>
+				</div>
+				<div class="text-wrapper_22 flex-col">
+					<span class="text_66">教师</span>
+					<a rel="noopener noreferrer" href="/jsfc.jhtml" class="text_60">教师风采</a>
+					<a rel="noopener noreferrer" href="/rcpy.jhtml" class="text_60">人才培养</a>
+					<a rel="noopener noreferrer" href="/xzry.jhtml" class="text_60">教师荣誉</a>
+				</div>
+				<div class="text-wrapper_23 flex-col">
+					<span class="text_70">学生</span>
+					<a rel="noopener noreferrer" href="/tdjs.jhtml" class="text_60">团队建设</a>
+					<a rel="noopener noreferrer" href="/hjxx.jhtml" class="text_60">获奖信息</a>
+					<a rel="noopener noreferrer" href="/xsst.jhtml" class="text_60">学生社团</a>
+				</div>
+				<div class="text-group_34 flex-col">
+					<span class="text_74">校友</span>
+					<a rel="noopener noreferrer" href="" class="text_60">校友活动</a>
+				</div> -->
+				<div class="image_9_box">
+					<img class="image_9" referrerpolicy="no-referrer" src="/r/cms/www/default/images/index/image-9.png" >
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/r/cms/www/default/js/front.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		console.log(new Date())
+		var date = new Date()
+		$(".new-date").html(date.getFullYear());
+		$(".blogroll").css("right",(405-(($(".blogroll").width())/2)));
+		$('.body-top-nav .link').on('mouseenter',function(){
+		    $('.blogroll').show()
+		})
+		$('.body-top-nav .link').on('mouseleave',function(){
+		    $('.blogroll').hide()
+		})
+		$('.blogroll').on('mouseleave',function(){
+		    $('.blogroll').hide()
+		});
+		$('.statistics .clicks li').click(function(){
+			var index = $(this).index();
+			$('.statistics .clicks li a').removeClass('reds');
+			$(this).find('a').addClass('reds');
+			$(".statistics .click-content .quantity").eq(index).removeClass("none").siblings().addClass("none");
+		});
+	});
+	$(function () {
+		Cms.siteFlow(""); 
+	});
+</script>
+  <script src="/r/cms/www/default/js/select2.full.min.js"></script>
+  <script src="/r/cms/www/default/js/clamp.min.js"></script>
+  <script src="/r/cms/www/default/js/moment.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <script>
+    let term = ""
+    let week = ""
+    let period = ""
+
+    let term_list = []
+    let week_list = []
+    let period_list = []
+
+    function getWeekNumber (startDateString, currentDateString) {
+      const startDate = new Date(startDateString)
+      const currentDate = new Date(currentDateString)
+
+      // 获取两个日期之间的天数差异
+      const diffTime = Math.abs(currentDate - startDate)
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+
+      // 获取开始日期是周几，注意JS中0表示周日，1表示周一，以此类推
+      const startDayOfWeek = startDate.getUTCDay()
+
+      // 确定开始日期后需要多少天才能完成第一周
+      const daysToCompleteFirstWeek = startDayOfWeek === 0 ? 1 : 7 - startDayOfWeek + 1
+
+      if (diffDays < daysToCompleteFirstWeek) {
+        return 1
+      }
+
+      // 剩下的天数，这个时候要考虑到已经过了完整的第一周
+      const remainingDays = diffDays - daysToCompleteFirstWeek
+
+      // 使用剩余天数计算周数，并加上第一周
+      return Math.floor(remainingDays / 7) + 2
+    }
+
+
+    $(document).ready(function (e) {
+      var $periodSelect = $('.period-select')
+      var $termSelect = $('.term-select')
+      var $weekSelect = $('.week-select')
+      var $weekInfo = $('.diet-day-item')
+      var $weekTime = $('.week-time')
+      var $xq_show = $('.xq_show')
+      var $remark = $('.remark')
+      var $tableContent = $('.weekly-diet-item')
+      // let replaceTargetList = ['学生早餐', '学生午餐', '学生晚餐']
+
+      function setDefaultValue () {
+        term_list.forEach((d) => {
+          if (d.id == term) {
+            let now = new Date().getTime()
+            let _start = new Date(d.startDate).getTime()
+            let _end = new Date(d.endDate).getTime()
+
+            if (now < _end && now > _start) {
+              let index = getWeekNumber(d.startDate, moment().format('YYYY-MM-DD'))
+              if (week_list && week_list[index - 1]) {
+                let _value = week_list[index - 1].id
+                $weekSelect.val(_value).trigger('change')
+              }
+            } else {
+              console.log('非当前学期', week_list[0])
+              let _value = week_list[0].id
+              $weekSelect.val(_value).trigger('change')
+            }
+          }
+        })
+      }
+
+      function initTerm () {
+        //初始化学期
+        term_list.forEach((d) => {
+          let now = new Date().getTime()
+          let _start = new Date(d.startDate).getTime()
+          let _end = new Date(d.endDate).getTime()
+
+          if (now < _end && now > _start) {
+            $termSelect.val(d.id).trigger('change')
+          }
+        })
+      }
+
+      function initPeroid () {
+        //初始化学段
+        if (period_list && period_list.length > 2) {
+          $periodSelect.val(period_list[1].id).trigger('change')
+        }
+      }
+
+      $.ajax({
+        url: "/prod-api/system/dict/data/type/moral_week",
+        data: {},
+        success: function (result) {
+          let _data = result.data
+          let _list = []
+          _data.forEach((d) => {
+            _list.push({
+              id: d.dictValue,
+              text: d.dictLabel
+            })
+          })
+
+          if (_list && _list.length) {
+            week = _list[0].id
+          }
+
+          $weekSelect.select2({
+            placeholder: '请选择周次',
+            width: '100px',
+            language: {
+              noResults: function (params) {
+                return "暂无数据"
+              }
+            },
+            minimumResultsForSearch: -1,
+            data: _list
+          })
+
+          week_list = _list
+          startFun()
+
+        }
+      })
+
+      $.ajax({
+        url: "/prod-api/system/dict/data/type/sys_period",
+        data: {},
+        success: function (result) {
+          if (result && result.code == 200) {
+            let _list = []
+            let _data = result.data
+            _data.forEach((d) => {
+              _list.push({
+                id: d.dictValue,
+                text: d.dictLabel,
+              })
+            })
+
+            if (_list && _list.length > 2) {
+              period = _list[1].id
+            }
+
+            $periodSelect.select2({
+              placeholder: '请选择学段',
+              width: '120px',
+              language: {
+                noResults: function (params) {
+                  return "暂无数据"
+                }
+              },
+              minimumResultsForSearch: -1,
+              data: _list
+            })
+
+            period_list = _list
+            startFun()
+          }
+
+        },
+      })
+
+
+      $.ajax({
+        url: "/prod-api/system/dict/data/type/server_semester",
+        data: {},
+        success: function (result) {
+          let _data = result.data
+          let _list = []
+          _data.forEach((d) => {
+            let remark = d.remark
+            if (remark) {
+              remark = JSON.parse(d.remark)
+            }
+
+            _list.push({
+              id: d.dictValue,
+              text: d.dictLabel,
+              startDate: remark.startDate,
+              endDate: remark.endDate,
+            })
+          })
+
+          if (_list && _list.length) {
+            term = _list[0].id
+          }
+
+          //学期和月份选择器初始化
+          $termSelect.select2({
+            placeholder: '请选择学期',
+            width: '240px',
+            language: {
+              noResults: function (params) {
+                return "暂无数据"
+              }
+            },
+            minimumResultsForSearch: -1,
+            data: _list
+          })
+
+          term_list = _list
+          startFun()
+
+        }
+      })
+
+
+      var getFoodlist = function () {
+        $remark[0].innerHTML = ""
+        $.ajax({
+          url: "/prod-api/moral/cookMenu/list",
+          data: {
+            pageNum: 1,
+            pageSize: 10,
+            term: term,
+            weekId: week,
+            period: period
+          },
+          success: function (res) {
+            if (res && res.code == 200) {
+              let data = res.rows
+              if (data && data.length) {
+                getFoodOInfo(data[0].id)
+              } else {
+                resetFoodInfo()
+              }
+            }
+          }
+        })
+      }
+
+      var getFoodOInfo = function (id) {
+        $.ajax({
+          url: "/prod-api/moral/cookMenu/info/" + id,
+          data: {},
+          success: function (res) {
+            if (res && res.code == 200) {
+              let _data = res.data
+
+              var dremark = ""
+              if (res.data.remark) {
+                dremark = res.data.remark
+              }
+              $remark[0].innerHTML = '<span>营养分析:</span>' + '<div style="margin: 6px 0;">' + dremark + '</div>'
+
+              if (_data && _data.menuDays && _data.menuDays.length) {
+
+                _data.menuDays.forEach((d, i) => {
+                  var bA = ""
+                  var bB = ""
+                  try {
+                    var bjson = JSON.parse(d.breakfast)
+                    bA = bjson['primary']
+                    bB = bjson['secondary']
+                  } catch (e) {
+                    bA = d.breakfast
+                    bB = ""
+                  }
+                  bA = formatTargetStyleBySrc(bA)
+                  // bB = formatTargetStyleBySrc(bB, replaceTargetList)
+                  var lA = ""
+                  var lB = ""
+                  try {
+                    var ljson = JSON.parse(d.lunch)
+                    lA = ljson['primary']
+                    lB = ljson['secondary']
+                  } catch (e) {
+                    lA = d.lunch
+                    lB = ""
+                  }
+                  lA = formatTargetStyleBySrc(lA)
+                  // lB = formatTargetStyleBySrc(lB, replaceTargetList)
+                  var dA = ""
+                  var dB = ""
+                  try {
+                    var djson = JSON.parse(d.dinner)
+                    dA = djson['primary']
+                    dB = djson['secondary']
+                  } catch (e) {
+                    dA = d.dinner
+                    dB = ""
+                  }
+                  dA = formatTargetStyleBySrc(dA)
+                  // dB = formatTargetStyleBySrc(dB, replaceTargetList)
+                  //console.log('bA', bA, 'bB', bB, 'lA', lA, 'lB', lB, 'dA', dA, 'dB', dB)
+                  if ($weekInfo[i]) {
+                    $($weekInfo[i].children[1]).children('.di-primary').html(bA)
+                    $($weekInfo[i].children[1]).children('.di-secondary').html(bB)
+                    $($weekInfo[i].children[3]).children('.di-primary').html(lA)
+                    $($weekInfo[i].children[3]).children('.di-secondary').html(lB)
+                    $($weekInfo[i].children[5]).children('.di-primary').html(dA)
+                    $($weekInfo[i].children[5]).children('.di-secondary').html(dB)                    
+
+                    var morningSnack = formatTargetStyleBySrc(d.morningSnack)
+                    var afternoonSnack = formatTargetStyleBySrc(d.afternoonSnack)
+                    $weekInfo[i].children[2].innerText = d.morningSnack
+                    $weekInfo[i].children[4].innerText = d.afternoonSnack
+                    // $($weekInfo[i].children[2]).children('.di-primary').html(morningSnack)
+                    // $($weekInfo[i].children[4]).children('.di-primary').html(afternoonSnack)
+                  }
+                })
+
+                let _startTime = _data.startTime.split('-')
+                let _endTime = _data.endTime.split('-')
+                let _start = [_startTime[1], _startTime[2]].join('-')
+                let _end = [_endTime[1], _endTime[2]].join('-')
+
+                let _time = '( ' + _start + ' ~ ' + _end + ' )'
+                $weekTime[0].innerText = _time
+              } else {
+                resetFoodInfo()
+              }
+            }
+          }
+        })
+      }
+
+      function startFun () {
+        if (week && period && term) {
+          initPeroid()
+          initTerm()
+          setDefaultValue()
+        }
+      }
+
+
+      var resetFoodInfo = function () {
+        $weekTime[0].innerText = ''
+        for (let i = 0; i < 7; i++) {
+          $($weekInfo[i].children[1]).children('.di-primary').text("")
+          $($weekInfo[i].children[1]).children('.di-secondary').text("")
+          $($weekInfo[i].children[3]).children('.di-primary').text("")
+          $($weekInfo[i].children[3]).children('.di-secondary').text("")
+          $($weekInfo[i].children[5]).children('.di-primary').text("")
+          $($weekInfo[i].children[5]).children('.di-secondary').text("")
+          $($weekInfo[i].children[2]).children('.di-primary').text("")
+          $($weekInfo[i].children[4]).children('.di-primary').text("")
+          // $weekInfo[i].children[2].innerText = ""
+          // $weekInfo[i].children[4].innerText = ""
+          // $weekInfo[i].children[2].innerText = d.morningSnack
+          // $weekInfo[i].children[4].innerText = d.afternoonSnack
+        }
+      }
+
+      $periodSelect.on('change', function (e) {
+        period = e.target.value
+        if (period == period_list[0].id) {
+          setXq('table-cell')
+          $tableContent.addClass('six')
+        } else {
+          setXq('none')
+          $tableContent.removeClass('six')
+        }
+        if (period && term && week) {
+          getFoodlist()
+        }
+      })
+
+      function setXq (state) {
+        let len = $xq_show.length
+        setDefaultValue()
+        for (let i = 0; i < len; i++) {
+          $xq_show[i].style.display = state
+        }
+      }
+
+
+      $termSelect.on('change', function (e) {
+        term = e.target.value
+        setDefaultValue()
+        if (period && term && week) {
+          getFoodlist()
+        }
+      })
+
+      $weekSelect.on('change', function (e) {
+        week = e.target.value
+        if (period && term && week) {
+          getFoodlist()
+        }
+      })
+
+
+      var greenKeyWord = ['清真']
+      function formatTargetStyleBySrc (src) {
+        if (!src) {
+          return ""
+        }
+        var tmp = src
+        // targetList.forEach((ele, i) => {
+        //   if (src.includes(ele)) {
+        //     tmp = tmp.replace(ele, '<span style="font-weight:800;">' + ele + '</span>')
+        //   }
+        // })
+        greenKeyWord.forEach((ele, i) => {
+          if (src.includes(ele)) {
+            tmp = tmp.replace(ele, '<br/><span style="font-weight:800;color:#078c51;">' + ele + '</span>')
+          }
+        })
+      
+        // 20240919新增, 单词断行
+        if (tmp.includes('\n')) {
+          var tmpPreArr = tmp.split('\n')
+          // console.log('formatTargetStyleBySrc tmpPreArr', tmpPreArr)
+          if (tmpPreArr) {
+            var rArr = []
+            tmpPreArr.forEach((ele, i) => {
+              if (ele.includes('、')) {
+                var it = []
+                var t = ele.split('、')
+                t.forEach((ie, ii) => {
+                  it.push('<span style="white-space:nowrap;">' + ie + '</span>')
+                })
+                // console.log('formatTargetStyleBySrc it', it)
+                rArr.push(it.join('、'))
+              } else {
+                rArr.push(ele)
+              }
+            })
+            // console.log('formatTargetStyleBySrc rArr', rArr)
+            tmp = rArr.join('\n')
+          }
+        } else {
+          // console.log('formatTargetStyleBySrc tmp.includes', tmp.includes('、'), tmp)
+          if (tmp.includes('、')) {
+            var it = []
+            var t = tmp.split('、')
+            t.forEach((ie, ii) => {
+              it.push('<span style="white-space:nowrap;">' + ie + '</span>')
+            })
+            tmp = it.join('、')
+            // console.log('formatTargetStyleBySrc >>>it', it, '>>>tmp', tmp)
+          }
+        }
+
+        // console.log('formatTargetStyleBySrc tmp', tmp)
+        return tmp
+      }
+
+    })
+  </script>
+</body>
+
+</html>
